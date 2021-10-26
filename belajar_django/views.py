@@ -8,7 +8,11 @@ from django.shortcuts import render
 #     return HttpResponse("Hello About!")
 
 def index(request):
-    return render(request, 'index.html')
+    context = {
+        'title' : 'Home | Belajar Django',
+        'page'  : 'Home'
+    }
+    return render(request, 'index.html', context)
 
-def about(request):
-    return render(request, 'about.html')
+# def about(request):
+#     return render(request, 'about.html')
