@@ -11,5 +11,6 @@ def index(request):
         ],
         'banner' : 'about/img/banner-3.jpg',
         'app_css' : 'about/css/style.css',
+        'logo' : 'img/fanta-logo.png',
     }
     return render(request, 'about/index.html', context)
