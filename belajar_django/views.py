@@ -10,7 +10,12 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title' : 'Home | Belajar Django',
-        'page'  : 'Home'
+        'page'  : 'Home',
+        'nav'   : [
+                    ['/' , 'Home'],
+                    ['/blog' , 'Blog'],
+                    ['/about' , 'About'],
+        ]
     }
     return render(request, 'index.html', context)
 
