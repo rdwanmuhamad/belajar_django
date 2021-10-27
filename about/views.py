@@ -8,6 +8,7 @@ def index(request):
                     ['/' , 'Home'],
                     ['/blog' , 'Blog'],
                     ['/about' , 'About'],
-        ]
+        ],
+        'banner' : 'about/img/banner-3.jpg',
     }
     return render(request, 'about/index.html', context)
