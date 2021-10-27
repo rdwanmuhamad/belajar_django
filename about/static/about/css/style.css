@@ -1,3 +1,13 @@
-h1 {
-    color: #f0a;
+.jumbotron {
+    background-image: url("/static/about/img/banner-3.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+h1,
+p {
+    color: white;
+    font-family: arial;
+    font-weight: bold;
 }

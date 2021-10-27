@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "snippets/style.html" %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    {% block app_css %}
+
+    {% endblock app_css %}
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    {% include "snippets/navbar.html" %}
+    <!-- endnavbar -->
+
+    <!-- <img src="{% static "img/banner-1.jpg" %}" alt="" style="width: 100%; height: 200px;" class="img-fluid"> -->
+    <!-- <h1>Hello, ini adalah halaman {{ page }}!</h1> -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+            {% block header %}
+
+            {% endblock header %}
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container bg-info text-dark shadow" style="margin-top: -100px;">
+
+            {% block content-1 %}
+
+            {% endblock content-1 %}
+
+        </div>
+        <div class="container bg-warning text-white shadow" style="margin-top: -100px;" id="myBody">
+
+            {% block content-2 %}
+
+            {% endblock content-2 %}
+
+        </div>
+        <div class="container bg-danger text-dark shadow" style="margin-top: -100px;">
+            <div class="row" style="height: 400px;">
+
+            </div>
+        </div>
+        <div class="container bg-dark text-white shadow" style="margin-top: -100px;">
+            <div class="row" style="height: 400px;">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+{% include "snippets/script.html" %}
+
+</html>

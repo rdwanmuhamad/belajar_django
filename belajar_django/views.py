@@ -18,7 +18,6 @@ def index(request):
         ],
         # 'banner' : 'img/banner-1.jpg',
         'logo' : 'img/fanta-logo.png',
-        'scrollNav' : 'js/scrollNav.js',
     }
     return render(request, 'index.html', context)
 
