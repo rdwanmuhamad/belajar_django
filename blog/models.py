@@ -4,6 +4,9 @@ from django.db import models
 class Post (models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    email = models.EmailField(default='nama@email.test')
+    alamat = models.CharField(max_length=255, blank=True,)
+    
 
     def __str__(self):
         return "{}".format(self.title)
