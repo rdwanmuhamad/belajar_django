@@ -9,4 +9,4 @@ class Post (models.Model):
     
 
     def __str__(self):
-        return "{}".format(self.title)
+        return "{}. {}".format(self.id,self.title)
