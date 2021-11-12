@@ -10,16 +10,17 @@
 {% block header %}
 <h1 class="display-4">Hello, ini adalah halaman {{ page }}!</h1>
 
-{% for post in Posts %}
-<h3>{{ post.title }}</h3>
-<p class="lead">{{ post.content }}</p>
-{% endfor %}
-
 {% endblock header %}
 
 {% block content-1 %}
 <div class="row" style="height: 400px;">
-
+    {% for post in Posts %}
+    <h3>{{ post.title }}</h3>
+    <p class="lead">{{ post.content }}</p>
+    <p class="lead">{{ post.category}}</p>
+    <p class="lead">{{ post.waktuPosting}}</p>
+    <br>
+    {% endfor %}
 </div>
 {% endblock content-1 %}
 
